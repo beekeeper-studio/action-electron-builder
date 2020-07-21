@@ -127,7 +127,7 @@ const runAction = () => {
 	const cmd = useVueCli ? "vue-cli-service electron:build" : "electron-builder";
 	run(
 		`${useNpm ? "npx --no-install" : "yarn run"} ${cmd} --${platform} ${
-			release ? "--publish always" : ""
+			release ? "--publish always" : "--publish never"
 		}`,
 		appRoot,
 	);
